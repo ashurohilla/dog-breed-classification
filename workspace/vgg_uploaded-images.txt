@@ -1,1 +1,0 @@
-* Doesn't Check the Command Line Arguments because 'get_input_args' hasn't been defined.

@@ -32,7 +32,6 @@ from classifier import classifier
 #       data type so no return is needed.
 # 
 def classify_images(images_dir, results_dic, model):
-
     """
     Creates classifier labels with classifier function, compares pet labels to 
     the classifier labels, and adds the classifier label and the comparison of 
@@ -70,7 +69,8 @@ def classify_images(images_dir, results_dic, model):
     """
     # Process all files in the results_dic - use images_dir to give fullpath
     # that indicates the folder and the filename (key) to be used in the 
-    # classifier function        
+    # classifier function
+    for key in results_dic:
        
        # TODO: 3a. Set the string variable model_label to be the string that's 
        #           returned from using the classifier function instead of the   
@@ -79,7 +79,7 @@ def classify_images(images_dir, results_dic, model):
        #  Runs classifier function to classify the images classifier function 
        # inputs: path + filename  and  model, returns model_label 
        # as classifier label
-    model_label = ""
+       model_label = ""
 
        # TODO: 3b. BELOW REPLACE pass with CODE to process the model_label to 
        #           convert all characters within model_label to lowercase 
@@ -89,7 +89,7 @@ def classify_images(images_dir, results_dic, model):
        #
        # Processes the results so they can be compared with pet image labels
        # set labels to lowercase (lower) and stripping off whitespace(strip)
-    pass
+       pass
               
        # defines truth as pet image label 
        truth = results_dic[key][0]

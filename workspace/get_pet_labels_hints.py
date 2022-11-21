@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 # */AIPND-revision/intropyproject-classify-pet-images/get_pet_labels_hints.py
 #                                                                             
-# PROGRAMMER: Ashish Rohilla
-# DATE CREATED:   18-11-2022                              
-# REVISED DATE: 21-11-2022
+# PROGRAMMER: 
+# DATE CREATED:                                  
+# REVISED DATE: 
 # PURPOSE: This is a *hints* file to help guide students in creating the 
 #          function get_pet_labels that creates the pet labels from the image's
 #          filename. This function inputs: 
@@ -54,13 +54,11 @@ def get_pet_labels(image_dir):
     # Processes through each file in the directory, extracting only the words
     # of the file that contain the pet image label
     for idx in range(0, len(in_files), 1):
-        
        
        # Skips file if starts with . (like .DS_Store of Mac OSX) because it 
        # isn't an pet image file
        if in_files[idx][0] != ".":
-            pet_image = in_files[idx].lower().split("_")
-     
+           
            # Creates temporary label variable to hold pet label name extracted 
            pet_label = ""
 
@@ -70,16 +68,13 @@ def get_pet_labels(image_dir):
            #          accessed by in_files[idx]. Be certain to place the 
            #          extracted dog breed name in the variable pet_label 
            #          that's created as an empty string ABOVE
-           for word in pet_image:
-            if word.isalpha():
-                pet_label += word + " "
+           pass
 
            # If filename doesn't already exist in dictionary add it and it's
            # pet label - otherwise print an error message because indicates 
-            pet_label = pet_label.strip()
            # duplicate files (filenames)
            if in_files[idx] not in results_dic:
-              results_dic[in_files[idx]] = [[pet_label]
+              results_dic[in_files[idx]] = [pet_label]
               
            else:
                print("** Warning: Duplicate files exist in directory:", 
@@ -87,4 +82,4 @@ def get_pet_labels(image_dir):
  
     # TODO 2b. Replace None with the results_dic dictionary that you created
     # with this function
-    return result_dic
+    return None

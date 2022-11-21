@@ -1,7 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# */AIPND-revision/intropyproject-classify-pet-images/check_images.py
+#
 # TODO 0: Add your information below for Programmer & Date Created.                                                                             
 # PROGRAMMER: Ashish Rohilla
-# DATE CREATED: 21-11-2022                
-# REVISED DATE: 
+# DATE CREATED: 18-11-2022                                 
+# REVISED DATE: 22-11-2022
 # PURPOSE: Classifies pet images using a pretrained CNN model, compares these
 #          classifications to the true identity of the pets in the images, and
 #          summarizes how well the CNN performed on the image classification task. 
@@ -115,7 +119,7 @@ def main():
     end_time = time()
     
     # TODO 0: Computes overall runtime in seconds & prints it in hh:mm:ss format
-    tot_time = end_time - start_time #calculate difference between end time and start time
+    tot_time = end_time-start_time #calculate difference between end time and start time
     print("\n** Total Elapsed Runtime:",
           str(int((tot_time/3600)))+":"+str(int((tot_time%3600)/60))+":"
           +str(int((tot_time%3600)%60)) )
